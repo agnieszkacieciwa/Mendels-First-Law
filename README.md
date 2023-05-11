@@ -4,9 +4,8 @@ This program calculates the possible combinations of offspring genotypes and the
 It is designed to work with genotypes following the Aa convention.
 
 ## Requirements
-Python 3.x
-
-`collections` module
+- Python 3.x
+- `collections` module
 
 ## Usage
 
