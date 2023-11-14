@@ -29,3 +29,8 @@ It is designed to work with genotypes following the Aa convention.
 10. The program waits for the user to press Enter to exit.
 
 Please ensure that you provide valid genotypes following the Aa convention for accurate results.
+
+
+## License
+
+This project is licensed under the MIT License.
