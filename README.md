@@ -47,6 +47,12 @@ Testing is crucial to ensure the accuracy and reliability of the Mendel's First 
 1. Run the testing script.
 2. The script will perform the defined test cases and report any failures or errors.
 
+
+
+
+**Note:** Ensure that both scripts (`Mendels-First-Law.py` and `test-Mendels-First-Law.py`) are in the same directory, and the testing script imports functions from the main script for accurate testing. 
+
+
 ## Exapmle  of usage
 
 ### Mendel's-First-Law
