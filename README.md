@@ -16,4 +16,8 @@ For example, one parent with the Aa genotype has two alleles: A and a, meaning t
 
 ## Exapmle  of usage
 
-![Screenshot 2023-12-22 102520](https://github.com/agnieszkacieciwa/Mendels-First-Law/assets/88035266/2c32244f-6683-4af6-9b61-cc713adba48e)
+### Mendel's-First-Law
+![obraz](https://github.com/agnieszkacieciwa/Mendels-First-Law/assets/88035266/57157d98-8f3c-48e9-be92-63227506ca8e)
+
+### Mendel's-First-Law-Unit-Test
+![obraz](https://github.com/agnieszkacieciwa/Mendels-First-Law/assets/88035266/293c0d34-c085-4141-8802-aa93b5828bed)
