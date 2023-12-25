@@ -1,14 +1,14 @@
 import sys
-from collections import Counter
+from collections import defaultdict
 
-# Function to get a valid genotype
+# Function to get a valid genotype with equal or distinct alleles
 def get_valid_genotype(prompt):
     while True:
         genotype = input(prompt)
-        if len(genotype) == 2:
+        if len(genotype) == 2 and (genotype[0].upper() == genotype[1].upper()):
             return genotype
         else:
-            print("Invalid input. Please enter a valid genotype with two characters.")
+            print("Invalid input. Please enter a valid genotype with two alleles of the same case.")
 
 # Function to calculate offspring genotypes
 def calculate_offspring_genotypes(genotype1, genotype2):
@@ -27,15 +27,22 @@ def calculate_offspring_genotypes(genotype1, genotype2):
     offspring = [o1, o2, o3, o4]
 
     # Count the occurrences of each offspring genotype
-    count_offspring = Counter(offspring)
+    count_offspring = defaultdict(int)
+    for genotype in offspring:
+        count_offspring[tuple(sorted(genotype))] += 1
+
     total_offspring = sum(count_offspring.values())
 
     return count_offspring, total_offspring
 
+
 # Print the possible combinations of offspring genotypes and their corresponding percentages
 def display_offspring_genotypes(count_offspring, total_offspring):
-    print("Possible combinations of offspring genotypes are:", set(count_offspring.keys()), "In the ratio:")
-    for genotype, count in count_offspring.items():
+    sorted_keys = sorted(count_offspring.keys(), key=lambda x: ''.join(sorted(map(str.upper, x))))  # Sort the keys manually
+    print("Possible combinations of offspring genotypes are:", sorted_keys, "In the ratio:")
+    for alleles in sorted_keys:
+        genotype = alleles[0]+ alleles[1]
+        count = count_offspring[alleles]
         percentage = count / total_offspring * 100
         print(f"{genotype}: {percentage:.2f}%")
 
